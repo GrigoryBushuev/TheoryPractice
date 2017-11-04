@@ -1,30 +1,30 @@
-using System;
-using Xunit;
+using NUnit.Framework;
 
-namespace ArraysAndStrings.Tests
+namespace ArraysAndStrings.Test
 {
+    [TestFixture]
     public class UniqueCheckerTest
     {
-        [Theory]
-        [InlineData("Qwerty", true)]
-        [InlineData("TestTest", false)]
+        [Test]
+        [TestCase("Qwerty", true)]
+        [TestCase("TestTest", false)]
         public void HasAllCharactersUniqueTest(string testString, bool expectedResult)
         {
             //Act
             var result = UniqueChecker.HasAllCharactersUnique(testString);
             //Assert
-            Assert.Equal(result, expectedResult);
+            Assert.AreEqual(result, expectedResult);
         }
 
-        [Theory]
-        [InlineData("Qwerty", true)]
-        [InlineData("TestTest", false)]
+        [Test]
+        [TestCase("Qwerty", true)]
+        [TestCase("TestTest", false)]
         public void HasAllCharactersUniqueInplaceTest(string testString, bool expectedResult)
         {
             //Act
             var result = UniqueChecker.HasAllCharactersUniqueInplace(testString);
             //Assert
-            Assert.Equal(result, expectedResult);
+            Assert.AreEqual(result, expectedResult);
         }
     }
 }

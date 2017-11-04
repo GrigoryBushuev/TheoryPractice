@@ -1,12 +1,11 @@
-using System;
-using Xunit;
+using NUnit.Framework;
 
-namespace ArraysAndStrings.Tests
+namespace ArraysAndStrings.Test
 {
-    
+    [TestFixture]
     public class AnagramGeneratorTest{
 
-        [Fact]
+        [Test]
         public void AnagramGenerator_Generates_Test()
         {
              //Arrange
