@@ -1,3 +1,4 @@
+using System.Linq;
 using NUnit.Framework;
 
 namespace ArraysAndStrings.Test
@@ -6,17 +7,14 @@ namespace ArraysAndStrings.Test
     public class AnagramGeneratorTest{
 
         [Test]
-        public void AnagramGenerator_Generates_Test()
-        {
-             //Arrange
-            var testString = "ABCD";                
+        [TestCase("ABC", 6)]
+        [TestCase("ABCD", 24)]
+        public void Generates_OnTestString_ReturnsExpectedNumberOfPermutations(string testString, int expectedNumberOfPermutations)
+        {    
              //Act
             var result = AnagramGenerator.Generate(testString);
              //Assert
-             foreach (var item in result)
-             {
-                 
-             }
+            Assert.AreEqual(expectedNumberOfPermutations, result.Count());
         }
     }
 }
