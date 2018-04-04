@@ -26,9 +26,13 @@ namespace DynamicProgramming
                 for (var j = 0; j < b.Length; j++)
                 {
                     if (a[i] == b[j])
+                    {
                         result[i, j] = (i == 0 || j == 0) ? 1 : result[i - 1, j - 1] + 1;
+                    }
                     else
+                    {
                         result[i, j] = Math.Max(j == 0 ? 0 : result[i, j - 1], i == 0 ? 0 : result[i - 1, j]);
+                    }                        
                 }
             }
             return result;
