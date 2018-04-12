@@ -12,14 +12,7 @@ namespace Backtracking
 
         private static readonly List<(int x, int y)> _allMoves = new List<(int x, int y)>
         {
-            (-2, 1),
-            (-2, -1),
-            (2, 1),
-            (2, -1),
-            (-1, 2),
-            (1, 2),
-            (-1, -2),
-            (1, -2),
+            (-2, 1), (-2, -1), (2, 1), (2, -1), (-1, 2), (1, 2), (-1, -2), (1, -2)
         };
 
         //1. Initialize the board
@@ -60,8 +53,10 @@ namespace Backtracking
         public bool Solve(int startYPos, int startXPos)
         {
             var isSolved = Solve(startYPos, startXPos, 1);
+#if DEBUG
             if (isSolved)
                 Print();
+#endif
             return isSolved;
         }
 
