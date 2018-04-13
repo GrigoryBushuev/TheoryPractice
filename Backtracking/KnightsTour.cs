@@ -5,6 +5,13 @@ using System.Linq;
 
 namespace Backtracking
 {
+    //1. Initialize the board
+    //2. Set an initial position of the knight.
+    //3. Define a list of all possible moves of the knight.
+
+    //3. At each move generate a list of all possible moves from the current position.
+    //4. For each valid position make a next move(mark a position in the board array by a number of the move) and go to 3 until we 
+    //   found a solution or backtrack if we can't make a valid move to continue.
     public class KnightsTour
     {
         private const int _boardSize = 8;
@@ -15,13 +22,6 @@ namespace Backtracking
             (-2, 1), (-2, -1), (2, 1), (2, -1), (-1, 2), (1, 2), (-1, -2), (1, -2)
         };
 
-        //1. Initialize the board
-        //2. Set an initial position of the knight.
-        //3. Define a list of all possible moves of the knight.
-
-        //3. At each move generate a list of all possible moves from the current position.
-        //4. For each valid position make a next move(mark a position in the board array by a number of the move) and go to 3 until we 
-        //   found a solution or we can't make a valid move to continue.
         private void Print()
         {
             for (var y = 0; y < _board.GetLength(0); y++)
