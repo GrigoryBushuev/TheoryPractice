@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="KnightsTour.cs" />
     <Compile Include="Maze.cs" />
+    <Compile Include="NQueensProblemSolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
