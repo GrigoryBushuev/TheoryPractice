@@ -13,25 +13,26 @@ namespace Backtracking.Tests
         [TestCase(4)]
         [TestCase(5)]
         [TestCase(6)]
-        public void GetSolutions_OnValidParams_ReturnsNotNull(int numberOfQueens)
+        [TestCase(8)]
+        public void GetSolutions_OnValidParams_HasAtLeastOneSolution(int numberOfQueens)
         {
             //Arrange
             var nQueensProblemSolver = new NQueensProblemSolver(numberOfQueens);
             //Act
             var result = nQueensProblemSolver.GetSolutions();
             //Assert
-            Assert.IsNotNull(result);
+            Assert.GreaterOrEqual(result.Count, 1);
         }
 
         [TestCase(3)]
-        public void GetSolutions_OnHasNoSolutionParams_ReturnsNull(int numberOfQueens)
+        public void GetSolutions_OnHasNoSolutionParams_HasNoSolutions(int numberOfQueens)
         {
             //Arrange
             var nQueensProblemSolver = new NQueensProblemSolver(numberOfQueens);
             //Act
             var result = nQueensProblemSolver.GetSolutions();
             //Assert
-            Assert.IsNull(result);
+            Assert.AreEqual(0, result.Count);
         }
     }
 }

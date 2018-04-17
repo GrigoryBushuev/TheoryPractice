@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace Backtracking
@@ -42,15 +43,21 @@ namespace Backtracking
             }
         }
 
-        public char[,] GetSolutions()
+        public IList<char[,]> GetSolutions()
         {
-
-            if (!GetSolution(0, 0))
-                return null;
+            var result = new List<char[,]>();
+            for (var i = 0; i < _queensNumber; i++)
+            {
+                if (GetSolution(0, i))
+                {
 #if DEBUG
-            Print();
+                    Print();
 #endif
-            return _board;
+                    result.Add(_board);
+                }
+                Clear();
+            }
+            return result;
         }
 
         private bool GetSolution(int y, int x)
