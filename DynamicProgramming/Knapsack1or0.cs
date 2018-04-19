@@ -29,19 +29,28 @@ namespace DynamicProgramming
         /// <returns></returns>
         public static decimal GetKnapsackItems(decimal maxWeight, List<KnapsackItem> items)
         {
-            return GetKnapsackItems(0, maxWeight, items);
+            var cache = new Dictionary<KeyValuePair<int, decimal>, decimal?>();
+            return GetKnapsackItems(cache, 0, maxWeight, items);
         }
 
-        private static decimal GetKnapsackItems(int index, decimal maxWeight, List<KnapsackItem> items)
+        private static decimal GetKnapsackItems(Dictionary<KeyValuePair<int, decimal>, decimal?> cache, int index, decimal maxWeight, List<KnapsackItem> items)
         {
             if (index == items.Count())
                 return 0;
 
-            if (items[index].Weight > maxWeight)
-                return GetKnapsackItems(index + 1, maxWeight, items);
+            var cacheKey = new KeyValuePair<int, decimal>(index, maxWeight);
+            if (cache.ContainsKey(cacheKey))
+                return cache[cacheKey].Value;
 
-            return Math.Max(GetKnapsackItems(index + 1, maxWeight, items)
-                                , GetKnapsackItems(index + 1, maxWeight - items[index].Weight, items) + items[index].Value);
+            decimal? result;
+            if (items[index].Weight > maxWeight)
+                result = GetKnapsackItems(cache, index + 1, maxWeight, items);
+            else
+                result = Math.Max(GetKnapsackItems(cache, index + 1, maxWeight, items)
+                                , GetKnapsackItems(cache, index + 1, maxWeight - items[index].Weight, items) + items[index].Value);
+
+            cache[cacheKey] = result;
+            return cache[cacheKey].Value;
         }
     }
 }
