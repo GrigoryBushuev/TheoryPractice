@@ -38,6 +38,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FibonacciTest.cs" />
+    <Compile Include="Knapsack1or0Tests.cs" />
     <Compile Include="LongestCommonSubsequenceTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
