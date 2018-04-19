@@ -17,6 +17,14 @@ namespace DynamicProgramming.Tests
                                                                       , new KnapsackItem(){ Weight = 3, Value = 12 }
                                                                      }};
 
+            yield return new object[] { 8.1M, 24.9M, new KnapsackItem[] {
+                                                                        new KnapsackItem() { Value = 1.5M, Weight = 8M }
+                                                                        , new KnapsackItem() { Value = 2.3M, Weight = 6M }
+                                                                        , new KnapsackItem() { Value = 1.8M, Weight = 4M }
+                                                                        , new KnapsackItem() { Value = 7.9M, Weight = 3M }
+                                                                        , new KnapsackItem() { Value = 8M, Weight = 3M }
+                                                                        , new KnapsackItem() { Value = 9M, Weight = 2M }
+                                                                     }};
         }
 
         [TestCaseSource("KnapsackTestSource")]

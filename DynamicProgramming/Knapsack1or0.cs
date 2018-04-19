@@ -10,11 +10,23 @@ namespace DynamicProgramming
         public decimal Value { get; set; }
     }
 
-    //For each item in knapsack we add it to knapsack and calculate the total value of knapsack with the added item
-    //or we skip current item  and calculate the total value of knapsack without the item
-    //if we reach a maximum weight we have to skip the item
+    /// <summary>
+    /// Given a list of items with values and weights, as well as a max
+    /// weight, find the maximum value you can generate from items,
+    /// where the sum of the weights is less than or equal to the max.
+    /// </summary>
     public static class Knapsack1or0
     {
+        /// <summary>
+        /// For each item we add it to knapsack
+        /// or we skip current item
+        /// and calculate the total value of knapsack with and without the item
+        /// if we reach a maximum weight we skip the item
+        ///Eventually take max value of the knapsack
+        /// </summary>
+        /// <param name="maxWeight"></param>
+        /// <param name="items"></param>
+        /// <returns></returns>
         public static decimal GetKnapsackItems(decimal maxWeight, List<KnapsackItem> items)
         {
             return GetKnapsackItems(0, maxWeight, items);
