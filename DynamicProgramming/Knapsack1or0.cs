@@ -27,13 +27,13 @@ namespace DynamicProgramming
         /// <param name="maxWeight"></param>
         /// <param name="items"></param>
         /// <returns></returns>
-        public static decimal GetKnapsackItems(decimal maxWeight, List<KnapsackItem> items)
+        public static decimal GetMaxValue(decimal maxWeight, List<KnapsackItem> items)
         {
             var cache = new Dictionary<KeyValuePair<int, decimal>, decimal?>();
-            return GetKnapsackItems(cache, 0, maxWeight, items);
+            return GetMaxValue(cache, 0, maxWeight, items);
         }
 
-        private static decimal GetKnapsackItems(Dictionary<KeyValuePair<int, decimal>, decimal?> cache, int index, decimal maxWeight, List<KnapsackItem> items)
+        private static decimal GetMaxValue(Dictionary<KeyValuePair<int, decimal>, decimal?> cache, int index, decimal maxWeight, List<KnapsackItem> items)
         {
             if (index == items.Count())
                 return 0;
@@ -44,13 +44,41 @@ namespace DynamicProgramming
 
             decimal? result;
             if (items[index].Weight > maxWeight)
-                result = GetKnapsackItems(cache, index + 1, maxWeight, items);
+                result = GetMaxValue(cache, index + 1, maxWeight, items);
             else
-                result = Math.Max(GetKnapsackItems(cache, index + 1, maxWeight, items)
-                                , GetKnapsackItems(cache, index + 1, maxWeight - items[index].Weight, items) + items[index].Value);
+                result = Math.Max(GetMaxValue(cache, index + 1, maxWeight, items)
+                                , GetMaxValue(cache, index + 1, maxWeight - items[index].Weight, items) + items[index].Value);
 
             cache[cacheKey] = result;
             return cache[cacheKey].Value;
+        }
+
+        public static IList<KnapsackItem> GetKnapsackItems(decimal maxWeight, List<KnapsackItem> items)
+        {
+            return GetKnapsackItems(0, maxWeight, items);
+        }
+
+        private static IList<KnapsackItem> GetKnapsackItems(int index, decimal maxWeight, IList<KnapsackItem> items)
+        {
+            var result = new List<KnapsackItem>();
+            if (index == items.Count())
+                return result;
+
+            if (items[index].Weight > maxWeight){
+                result.AddRange(GetKnapsackItems(index + 1, maxWeight, items));
+                return result;
+            }
+            var currentItem = items[index];
+            var includedItems = GetKnapsackItems(index + 1, maxWeight - currentItem.Weight, items);
+            var excludedItems = GetKnapsackItems(index + 1, maxWeight, items);
+            if (includedItems.Sum(i => i.Value) + currentItem.Value > excludedItems.Sum(i => i.Value)) {
+                result.AddRange(includedItems);
+                result.Add(currentItem);
+            }
+            else {
+                result.AddRange(excludedItems);
+            }
+            return result;
         }
     }
 }
