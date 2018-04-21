@@ -5,26 +5,24 @@ namespace ArraysAndStrings
 {  
     public static class ArrayUtils
     {
-        public static long Factorial(int n){
-            if (n < 0)
-                throw new ArgumentOutOfRangeException(nameof(n));
+        /// <summary>
+        /// Fisher-Yates shuffling
+        /// </summary>
+        /// <param name="array"></param>
+        public static void Shuffle<T>(this T[] array)
+        {
+            if (array == null)
+                throw new ArgumentNullException(nameof(array));
 
-            long Fact(int val)
+            if (array.Length == 0)
+                return;
+
+            var rand = new Random();
+            for (var i = array.Length - 1; i >= 0; i--)
             {
-                if (val == 0)
-                    return 1;
-                return val * Fact(val - 1);
+                var j = rand.Next(i);
+                Swap(array, j, i);
             }
-
-            return Fact(n);        
-        }        
-
-        public static long GetFactorialOf(int n){
-            long result = 1;
-            for (int i = 2; i <= n; i++){
-                result = result * i;
-            }
-            return result;
         }
 
         public static void Swap<T>(this T[] array, int i, int j, out T[] result){
