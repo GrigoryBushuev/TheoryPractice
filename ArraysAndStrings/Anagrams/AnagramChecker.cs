@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ArraysAndStrings
+namespace ArraysAndStrings.Anagrams
 {
     public static class AnagramChecker
     {
@@ -12,7 +12,7 @@ namespace ArraysAndStrings
             foreach (var letter in testString)
             {
                 if (testDictionary.ContainsKey(letter))
-                    testDictionary[letter] = testDictionary[letter] + 1;
+                    testDictionary[letter]++;
                 else
                     testDictionary.Add(letter, 0);
             }

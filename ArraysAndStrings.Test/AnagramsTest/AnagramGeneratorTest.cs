@@ -1,12 +1,12 @@
 using System.Linq;
+using ArraysAndStrings.Anagrams;
 using NUnit.Framework;
 
-namespace ArraysAndStrings.Test
+namespace ArraysAndStrings.Test.AnagramsTest
 {
     [TestFixture]
     public class AnagramGeneratorTest{
 
-        [Test]
         [TestCase("ABC", 6)]
         [TestCase("ABCD", 24)]
         public void Generates_OnTestString_ReturnsExpectedNumberOfPermutations(string testString, int expectedNumberOfPermutations)

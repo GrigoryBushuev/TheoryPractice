@@ -1,11 +1,11 @@
-﻿using NUnit.Framework;
+﻿using ArraysAndStrings.Anagrams;
+using NUnit.Framework;
 
-namespace ArraysAndStrings.Test
+namespace ArraysAndStrings.Test.AnagramsTest
 {
     [TestFixture]
     public class AnagramCheckerTest
     {
-        [Test]
         [TestCase("AABCD", "BACAD", true)]
         [TestCase("ABCD", "BACAD", false)]
         public void IsAnagramTest(string first, string second, bool expectedResult)
