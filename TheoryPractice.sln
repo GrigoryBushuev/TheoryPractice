@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtracking", "Backtrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtracking.Tests", "Backtracking.Tests\Backtracking.Tests.csproj", "{049765C8-DC09-43B6-ACEB-EEFE6A071D49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math.Test", "Math.Test\Math.Test.csproj", "{C51AA5C4-177A-4525-99B3-D8170D359ED5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{049765C8-DC09-43B6-ACEB-EEFE6A071D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{049765C8-DC09-43B6-ACEB-EEFE6A071D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{049765C8-DC09-43B6-ACEB-EEFE6A071D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C51AA5C4-177A-4525-99B3-D8170D359ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C51AA5C4-177A-4525-99B3-D8170D359ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C51AA5C4-177A-4525-99B3-D8170D359ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C51AA5C4-177A-4525-99B3-D8170D359ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
