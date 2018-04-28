@@ -23,15 +23,18 @@ namespace BitwiseOperations
         /// </summary>
         /// <param name="dec"></param>
         /// <returns></returns>
-        public static string DecToBinary(int dec)
+        public static string DecToBinary(uint dec)
         {
+            if (dec < 2)
+                return dec.ToString();
+
             var sb = new StringBuilder();
             while (dec != 0) {
                 sb.Append(dec % 2);
                 dec = dec / 2;                
             }
 
-            return new String(sb.ToString().ToCharArray().Reverse().ToArray());
+            return String.Concat(sb.ToString().ToCharArray().Reverse());
         }
     }
 }

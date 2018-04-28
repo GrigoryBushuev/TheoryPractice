@@ -20,10 +20,12 @@ namespace BitwiseOperations.Test
             Assert.AreEqual(b, expectedResultB);
         }
 
-        [TestCase(8, "1000")]
-        [TestCase(7, "111")]
-        [TestCase(6, "110")]
-        public void DecToBinary_OnValidParams_ReturnsExpectedResult(int dec, string expectedResult)
+        [TestCase(0u, "0")]
+        [TestCase(1u, "1")]
+        [TestCase(8u, "1000")]
+        [TestCase(7u, "111")]
+        [TestCase(6u, "110")]
+        public void DecToBinary_OnValidParams_ReturnsExpectedResult(uint dec, string expectedResult)
         {
             //Act
             var actualResult = BitwiseUtils.DecToBinary(dec);
