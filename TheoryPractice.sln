@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations", "BitOpe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations.Test", "BitwiseOperations.Test\BitwiseOperations.Test.csproj", "{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

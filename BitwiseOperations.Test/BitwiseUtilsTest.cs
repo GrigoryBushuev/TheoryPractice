@@ -2,6 +2,7 @@
 
 namespace BitwiseOperations.Test
 {
+    [Category("Bitwise")]
     [TestFixture]
     public class BitwiseUtilsTest
     {
@@ -19,5 +20,14 @@ namespace BitwiseOperations.Test
             Assert.AreEqual(b, expectedResultB);
         }
 
+        [TestCase(8, "1000")]
+        [TestCase(7, "111")]
+        [TestCase(6, "110")]
+        public void DecToBinary_OnValidParams_ReturnsExpectedResult(int dec, string expectedResult)
+        {
+            //Act
+            var actualResult = BitwiseUtils.DecToBinary(dec);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

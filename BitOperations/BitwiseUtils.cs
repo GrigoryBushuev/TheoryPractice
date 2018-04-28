@@ -1,4 +1,8 @@
-﻿namespace BitwiseOperations
+﻿using System.Text;
+using System.Linq;
+using System;
+
+namespace BitwiseOperations
 {
     public static class BitwiseUtils
     {
@@ -12,6 +16,22 @@
             b = a ^ b;
             a = a ^ b;
             b = a ^ b;
+        }
+
+        /// <summary>
+        /// Converts an integer to binary
+        /// </summary>
+        /// <param name="dec"></param>
+        /// <returns></returns>
+        public static string DecToBinary(int dec)
+        {
+            var sb = new StringBuilder();
+            while (dec != 0) {
+                sb.Append(dec % 2);
+                dec = dec / 2;                
+            }
+
+            return new String(sb.ToString().ToCharArray().Reverse().ToArray());
         }
     }
 }
