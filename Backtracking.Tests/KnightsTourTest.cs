@@ -2,6 +2,7 @@
 
 namespace Backtracking.Tests
 {
+    [Category("KnightsTour")]
     [TestFixture]
     public class KnightsTourTest
     {

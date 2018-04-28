@@ -21,9 +21,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math.Tests", "Math.Test\Mat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations", "BitOperations\BitwiseOperations.csproj", "{DF4B8F12-84E3-4CB4-8E78-F8A36497F4C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations.Test", "BitwiseOperations.Test\BitwiseOperations.Test.csproj", "{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations.Tests", "BitwiseOperations.Test\BitwiseOperations.Tests.csproj", "{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Tests", "LinkedList.Tests\LinkedList.Tests.csproj", "{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
