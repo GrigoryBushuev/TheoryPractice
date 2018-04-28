@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C51AA5C4-177A-4525-99B3-D8170D359ED5}</ProjectGuid>
+    <ProjectGuid>{8CD31DE0-8127-46A3-A87F-ADAEA2681A71}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Math.Test</RootNamespace>
-    <AssemblyName>Math.Test</AssemblyName>
+    <RootNamespace>BitwiseOperations.Test</RootNamespace>
+    <AssemblyName>BitwiseOperations.Test</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PowerUtilsTest.cs" />
+    <Compile Include="BitwiseUtilsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +56,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Math\Math.csproj">
-      <Project>{c96feff4-cfb3-441f-bc77-4e71bb4a133c}</Project>
-      <Name>Math</Name>
+    <ProjectReference Include="..\BitOperations\BitwiseOperations.csproj">
+      <Project>{df4b8f12-84e3-4cb4-8e78-f8a36497f4c0}</Project>
+      <Name>BitwiseOperations</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Math
+﻿namespace Math
 {
     public static class PowerUtils
     {
@@ -26,6 +20,24 @@ namespace Math
             return (q % 2 == 0) ? product : p * product;
         }
 
+        /// <summary>
+        /// IsPowerOf2
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public static bool IsPowerOf2(uint p)
+        {
+            if (p == 0)
+                return false;
+
+            if (p == 1 || p == 2)
+                return true;
+
+            while (p > 2 && p % 2 == 0)
+                p >>= 1;
+
+            return p == 2;        
+        }
 
     }
 }
