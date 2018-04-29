@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtracking", "Backtrackin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backtracking.Tests", "Backtracking.Tests\Backtracking.Tests.csproj", "{049765C8-DC09-43B6-ACEB-EEFE6A071D49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math", "Math\Math.csproj", "{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathUtils", "Math\MathUtils.csproj", "{C96FEFF4-CFB3-441F-BC77-4E71BB4A133C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Math.Tests", "Math.Test\Math.Tests.csproj", "{C51AA5C4-177A-4525-99B3-D8170D359ED5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathUtils.Tests", "Math.Test\MathUtils.Tests.csproj", "{C51AA5C4-177A-4525-99B3-D8170D359ED5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitwiseOperations", "BitOperations\BitwiseOperations.csproj", "{DF4B8F12-84E3-4CB4-8E78-F8A36497F4C0}"
 EndProject
@@ -26,6 +26,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{6FCAAE58-8E98-42B0-87CD-8BD0886C8F0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Tests", "LinkedList.Tests\LinkedList.Tests.csproj", "{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.csproj", "{71543554-C7DC-4B68-A1DE-8AF30F0989B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE804CC-2EB7-4364-A06D-A1679E59D4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

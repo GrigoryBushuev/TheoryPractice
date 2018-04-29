@@ -1,6 +1,6 @@
 ﻿using NUnit.Framework;
 
-namespace Math.Test
+namespace MathUtils.Test
 {
     [TestFixture]
     public class PowerUtilsTest
