@@ -29,6 +29,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList.Tests", "LinkedL
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinarySearchTree", "BinarySearchTree\BinarySearchTree.csproj", "{71543554-C7DC-4B68-A1DE-8AF30F0989B7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashtable", "Hashtables\Hashtable.csproj", "{780A3FCA-9315-4E6F-ADE6-D898DE3F3B61}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hashtable.Tests", "Hashtable.Tests\Hashtable.Tests.csproj", "{7A501158-1153-4213-9278-05AF9558AF0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +91,14 @@ Global
 		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71543554-C7DC-4B68-A1DE-8AF30F0989B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{780A3FCA-9315-4E6F-ADE6-D898DE3F3B61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{780A3FCA-9315-4E6F-ADE6-D898DE3F3B61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{780A3FCA-9315-4E6F-ADE6-D898DE3F3B61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{780A3FCA-9315-4E6F-ADE6-D898DE3F3B61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A501158-1153-4213-9278-05AF9558AF0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A501158-1153-4213-9278-05AF9558AF0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A501158-1153-4213-9278-05AF9558AF0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A501158-1153-4213-9278-05AF9558AF0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
