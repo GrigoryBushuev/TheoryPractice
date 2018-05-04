@@ -6,11 +6,12 @@ namespace Hashtables
 {
     public class WordsCounter
     {
+        private static readonly Regex _endingSymbolsRegex = new Regex(".*(;|,|:|\\?|\\.|!)$"); 
         private Dictionary<string, uint> _wordsCounter;
 
         public WordsCounter(string text)
         {
-            if (text == null)
+            if (String.IsNullOrWhiteSpace(text))
                 throw new ArgumentNullException(nameof(text));
 
             _wordsCounter = GetWordsCounter(text);
@@ -39,7 +40,7 @@ namespace Hashtables
         private string GetNormalizedWord(string word)
         {
             var result = word.ToUpper();
-            if (Regex.IsMatch(result, ".*(;|,|:|\\?|\\.|!)$"))
+            if (_endingSymbolsRegex.IsMatch(result))
                 result = result.Substring(0, result.Length - 1);
 
             return result;
